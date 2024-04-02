@@ -1,0 +1,39 @@
+.animation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding-top: 70%;
+  padding-bottom: 100%;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.logoimage12 {
+  /* background-image: url("/logo.png"); */
+  height: 48px;
+  width: 240px;
+  background-size: cover;
+}
+
+.logoimagepic {
+  z-index: 2;
+  position: relative;
+}
+
+.data{
+  display: none;
+  }
+.circularcontainer1 {
+  position: absolute;
+  margin-left: 20px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  background-color: #165DD7; /* Blue color for the container */
+  border-radius: 50%; /* Make it circular */
+  opacity: 1; /* Initial opacity */
+
+  /* Animation */
+  animation: zoomIn 2s forwards 1s;
+}
