@@ -109,12 +109,12 @@ const handleCancel = () => {
       <div>
         <CustomNavbar />
         {showContact &&(
-        <div style={{ height: '100%', padding: '10%', backgroundColor: '#f0f0f0' }}>
+        <div className='Main'>
           <Container style={{ height: '60%' }}>
             <Form form={form} name="validateOnly" layout="vertical" autoComplete="off" onFinish={onFinish}>
               <Form.Item>
                 <h5>Brief</h5>
-                <h2>Now please fill out this questionnaire about your project. It’s like a Buzzfeed quiz</h2>
+                <h2 className='Ctittle'>Now please fill out this questionnaire about your project. It’s like a Buzzfeed quiz</h2>
               </Form.Item>
               <Row gutter={16}>
                 <Col span={12}>

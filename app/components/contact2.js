@@ -31,26 +31,26 @@ const Contact2 = (props) => {
             <div>
                 <CustomNavbar />
                 {showContact && (
-                    <div style={{ height: '100%', padding: '10%', backgroundColor: '#f0f0f0' }}>
+                    <div className='Main'>
                         <Container style={{ height: '60%' }}>
                             <Form form={form} onFinish={onFinish} layout="vertical">
                                 <Form.Item style={{ height: 'auto' }}>
                                     <h5 style={{ height: '5%', fontFamily: 'Satoshi', fontSize: '24px', fontWeight: 700, lineHeight: '32.4px', textAlign: 'left' }}>Start a project</h5>
-                                    <h2 style={{ fontFamily: 'Satoshi', fontSize: '48px', fontWeight: 900, lineHeight: '64.8px', textAlign: 'left', width: '100%', height: '10%' }}>So you want to work with us? We are pretty #goal- <br />oriented. What can we do for you?</h2>
+                                    <h2 className='Ctittle'>So you want to work with us? We are pretty #goal- <br />oriented. What can we do for you?</h2>
                                 </Form.Item>
 
                                 <Row gutter={[16, 16]}>
                                     <Col span={24}>
                                         <Radio.Group onChange={(e) => handleTextClick(e.target.value)} value={selectedOption}>
-                                            <div style={{ marginBottom: '3%' }}>
-                                                <Radio className='buttons' value="Performance Marketing">Performance Marketing</Radio>
-                                                <Radio className='buttons' value="Media Buying">Media Buying</Radio>
-                                                <Radio className='buttons' value="Web Development">Web Development</Radio>
+                                             <div  className='lg-mb-4 sm-mb-4'>
+                                                <Radio className='buttons mb-3' value="Performance Marketing">Performance Marketing</Radio>
+                                                <Radio className='buttons mb-3' value="Media Buying">Media Buying</Radio>
+                                                <Radio className='buttons mb-3' value="Web Development">Web Development</Radio>
                                             </div>
-                                            <div style={{ marginBottom: '3%' }}>
-                                                <Radio className='buttons' value="Content Marketing">Content Marketing</Radio>
-                                                <Radio className='buttons' value="Martech">Martech</Radio>
-                                                <Radio className='buttons' value="Lead Generation">Lead Generation</Radio>
+                                             <div  className='lg-mb-4 sm-mb-4'>
+                                                <Radio className='buttons mb-3' value="Content Marketing">Content Marketing</Radio>
+                                                <Radio className='buttons mb-3' value="Martech">Martech</Radio>
+                                                <Radio className='buttons mb-3' value="Lead Generation">Lead Generation</Radio>
                                             </div>
                                         </Radio.Group>
                                     </Col>

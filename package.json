@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "antd": "^5.16.0",
+    "boo": "^2.0.0",
     "bootstrap": "^5.3.3",
     "mongodb": "^6.5.0",
     "next": "13.5.6",

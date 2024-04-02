@@ -54,22 +54,22 @@ const Contact3 = (props) => {
       <div>
         <CustomNavbar />
         {showContact && (
-        <div style={{  height: '100%', padding: '10%', backgroundColor: '#f0f0f0' }}>
+        <div className='Main'>
         <Container style={{  height: '60%'}}>
         <Form form={form} onFinish={onFinish} layout="vertical">
       <Form.Item style={{ height: 'auto' }}>
         <h5 style={{ height: '5%', fontFamily: 'Satoshi', fontSize: '24px', fontWeight: 700, lineHeight: '32.4px', textAlign: 'left' }}>Budget</h5>
-        <h2 style={{ fontFamily: 'Satoshi', fontSize: '48px', fontWeight: 900, lineHeight: '64.8px', textAlign: 'left', width: '100%', height: '10%' }}>What’s your budget range for this UX & Web<br/> Design project?</h2>
+        <h2 className='Ctittle'>What’s your budget range for this UX & Web<br/> Design project?</h2>
       </Form.Item>
 
       <Row gutter={[16, 16]}>
         <Col span={24}>
           <Radio.Group onChange={(e) => handleTextClick(e.target.value)} value={selectedOption}>
-            <div style={{ marginBottom: '3%' }}>
-              <Radio className='buttons' value="20k - 25k">20k - 25k</Radio>
-              <Radio className='buttons' value="40k - 45k">40k - 45k</Radio>
-              <Radio className='buttons' value="60k - 65k">60k - 65k</Radio>
-              <Radio className='buttons' value="100k - 105k">100k - 105k</Radio>
+          <div  className='lg-mb-4 sm-mb-4'>
+              <Radio className='buttons mb-3' value="20k - 25k">20k - 25k</Radio>
+              <Radio className='buttons mb-3' value="40k - 45k">40k - 45k</Radio>
+              <Radio className='buttons mb-3' value="60k - 65k">60k - 65k</Radio>
+              <Radio className='buttons mb-3' value="100k - 105k">100k - 105k</Radio>
             </div>
           </Radio.Group>
         </Col>

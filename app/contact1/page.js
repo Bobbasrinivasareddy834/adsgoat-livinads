@@ -32,25 +32,25 @@ const Contact = () => {
       <div>
         <CustomNavbar />
         {showContact && (
-        <div style={{ height: '100%', padding: '10%', backgroundColor: '#f0f0f0' }}>
+        <div className='Main'>
           <Container style={{ height: '60%' }}>
               <Form onFinish={onFinish} layout="vertical">
                 <div style={{ height: 'auto' }}>
                   <h5 style={{ height: '5%', fontFamily: 'Satoshi', fontSize: '24px', fontWeight: 700, lineHeight: '32.4px', textAlign: 'left' }}>Contact us</h5>
-                  <h2 style={{ fontFamily: 'Satoshi', fontSize: '48px', fontWeight: 900, lineHeight: '64.8px', textAlign: 'left', width: '100%', height: '10%' }}>Hi there. What can we help you with</h2>
+                  <h2 className='Ctittle'>Hi there. What can we help you with</h2>
                 </div>
 
-                <Row gutter={[16, 16]}>
+                <Row gutter={[16, 16]} >
                   <Col span={24}>
                     <Radio.Group onChange={(e) => handleTextClick(e.target.value)} value={selectedOption}>
-                      <div style={{ marginBottom: '3%' }}>
-                        <Radio className='buttons' value="Start a project">Start a project</Radio>
-                        <Radio className='buttons' value="Join the team">Join the team</Radio>
-                        <Radio className='buttons' value="Drop a quick word">Drop a quick word</Radio>
+                     <div  className='lg-mb-4 sm-mb-4'>
+                        <Radio className='buttons mb-3' value="Start a project">Start a project</Radio>
+                        <Radio className='buttons mb-3' value="Join the team">Join the team</Radio>
+                        <Radio className='buttons mb-3' value="Drop a quick word">Drop a quick word</Radio>
                       </div>
-                      <div style={{ marginBottom: '3%' }}>
-                        <Radio className='buttons' value="Apply for an Internship">Apply for an Internship</Radio>
-                        <Radio className='buttons' value="About Us">About Us</Radio>
+                     <div  className='lg-mb-4 sm-mb-4'>
+                        <Radio className='buttons mb-3' value="Apply for an Internship">Apply for an Internship</Radio>
+                        <Radio className='buttons mb-3' value="About Us">About Us</Radio>
                       </div>
                     </Radio.Group>
                   </Col>

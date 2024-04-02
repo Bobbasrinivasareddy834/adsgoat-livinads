@@ -30,7 +30,7 @@ export default function Home() {
         <div>
           <div className="logoimage12">
             <div className="circularcontainer1"></div>
-            <Image src="/logo.png" height={40} width={180} alt="image" className='logoimagepic'/>
+            <Image src="/logo.png" height={40} width={180} alt="image" className='img-fluid'/>
           </div>
           <YourComponent />
         </div>

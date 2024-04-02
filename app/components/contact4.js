@@ -43,12 +43,12 @@ const Contact4 = (props) => {
       <div>
         <CustomNavbar />
         {showContact && (
-          <div style={{ height: '100%', padding: '10%', backgroundColor: '#f0f0f0' }}>
+          <div className='Main'>
             <Container style={{ height: '60%' }}>
               <Form form={form} onFinish={onFinish} layout="vertical">
                 <Form.Item style={{ height: 'auto' }}>
                   <h5 style={{ height: '5%', fontFamily: 'Satoshi', fontSize: '24px', fontWeight: 700, lineHeight: '32.4px', textAlign: 'left' }}>Brief</h5>
-                  <h2 style={{ fontFamily: 'Satoshi', fontSize: '48px', fontWeight: 900, lineHeight: '64.8px', textAlign: 'left', width: '100%', height: '10%' }}>Anything Else you’d like to add?</h2>
+                  <h2 className='Ctittle'>Anything Else you’d like to add?</h2>
                 </Form.Item>
 
                 <Form.Item
