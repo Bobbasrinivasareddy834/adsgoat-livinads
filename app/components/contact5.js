@@ -48,12 +48,87 @@ const Contact5 = (props) => {
           console.error('Error response:', response.status, response.statusText);
           throw new Error('Network response was not ok');
         }
+
+        const emailResponse = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ consoleLogs }), 
+        });
+    
+        if (!emailResponse.ok) {
+          console.error('Error response from /api/send-email:', emailResponse.status, emailResponse.statusText);
+          throw new Error('Failed to send email');
+        }
+        
+        console.log('Email sent successfully');
       } catch (error) {
         console.error('Caught error:', error);
       }
+      // } catch (error) {
+      //   console.error('Caught error:', error);
+      // }
     };
       postData();
   }, [consoleLogs]);
+  
+  // const handleSubmit = async () => {
+  //   try {
+  //     const emailResponse = await fetch('/api/send-email', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ consoleLogs }), 
+  //     });
+  //     if (!emailResponse.ok) {
+  //       console.error('Error sending email:', emailResponse.status, emailResponse.statusText);
+  //       throw new Error('Failed to send email');
+  //     }
+  //   } catch (error) {
+  //     console.error('Caught error:', error);
+  //   }
+  // };
+
+
+  // const handleSubmit = async () => {
+  //   try {
+  //     // Send data to /api/data
+  //     const dataResponse = await fetch('/api/data', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ consoleLogs }), 
+  //     });
+         
+  //     if (!dataResponse.ok) {
+  //       console.error('Error response from /api/data:', dataResponse.status, dataResponse.statusText);
+  //       throw new Error('Network response from /api/data was not ok');
+  //     }
+      
+  //     console.log('Data posted successfully to /api/data');
+  
+  //     // Send email using data from /api/data
+  //     const emailResponse = await fetch('/api/send-email', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ consoleLogs }), 
+  //     });
+  
+  //     if (!emailResponse.ok) {
+  //       console.error('Error response from /api/send-email:', emailResponse.status, emailResponse.statusText);
+  //       throw new Error('Failed to send email');
+  //     }
+      
+  //     console.log('Email sent successfully');
+  //   } catch (error) {
+  //     console.error('Caught error:', error);
+  //   }
+  // };
   
 
 //   useEffect(() => {

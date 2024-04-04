@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
             const { consoleLogs } = req.body;
-            console.log(consoleLogs);
+            console.log(consoleLogs,'mongodb data');
             const filteredLogs = consoleLogs.filter(obj => Object.keys(obj).length > 0);
 
             if (filteredLogs.length === 0) {
